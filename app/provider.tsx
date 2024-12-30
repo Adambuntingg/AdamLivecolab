@@ -6,7 +6,7 @@ import { useUser } from '@clerk/nextjs';
 import { LiveblocksProvider, ClientSideSuspense } from '@liveblocks/react/suspense';
 import { ReactNode } from 'react';
 
-const provider = ({ children }: {children: ReactNode}) => {
+const Provider = ({ children }: {children: ReactNode}) => {
   const {user: clerkUser } = useUser();
   return (
     <LiveblocksProvider 
@@ -34,4 +34,4 @@ const provider = ({ children }: {children: ReactNode}) => {
   )
 }
 
-export default provider
+export default Provider
